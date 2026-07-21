@@ -1,0 +1,42 @@
+{
+  "case_number": "IF-2026-006",
+  "client_name": "AENZA",
+  "report_date": "2026-07-13",
+  "support_type": "Soporte remoto programado",
+  "connection_method": "Web conferencia mediante Microsoft Teams y acceso remoto controlado.",
+  "support_duration": "1 hora",
+  "establishment": "AENZA",
+  "location": "Lima, Perú",
+  "subject": "Renovación de certificado local de Cisco ISE",
+  "objective": "Renovar el certificado local y validar la continuidad operativa del servicio de autenticación.",
+  "background": "El cliente reportó una alerta de vencimiento asociada a un certificado local de la plataforma.",
+  "initial_scenario": "Se confirmó la fecha de expiración y se identificó el certificado productivo antes de iniciar la actividad.",
+  "impact_notes": [
+    "La intervención fue planificada para ejecutarse dentro de una ventana aprobada.",
+    "Se validó continuidad operativa antes y después de aplicar el cambio."
+  ],
+  "actions_performed": [
+    "Se realizó respaldo de configuración antes de la intervención.",
+    "Se renovó el certificado local durante la ventana aprobada.",
+    "Se validaron los servicios de autenticación y la integración con Active Directory."
+  ],
+  "validations": [
+    {"validation": "Disponibilidad de la plataforma", "result": "Servicio operativo después de la intervención", "status": "OK"},
+    {"validation": "Autenticaciones", "result": "Pruebas satisfactorias", "status": "OK"},
+    {"validation": "Integración de directorio", "result": "Diagnóstico satisfactorio", "status": "OK"}
+  ],
+  "results": [
+    "La actividad fue completada dentro de la ventana autorizada.",
+    "No se evidenció afectación del servicio productivo."
+  ],
+  "recommendations": [
+    "Mantener alertas de vencimiento con anticipación suficiente.",
+    "Conservar los respaldos y evidencias de la intervención."
+  ],
+  "technical_details": {
+    "Equipo": "Cisco Identity Services Engine",
+    "Hostname": "ise-cliente-01",
+    "FQDN": "ise-cliente.example.com",
+    "Despliegue": "Standalone"
+  }
+}

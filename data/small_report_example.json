@@ -1,0 +1,32 @@
+{
+  "case_number": "SR-2026-001",
+  "client_name": "Agro Industrial Parmonga",
+  "report_date": "2026-07-16",
+  "connection_method": "Remoto mediante Microsoft Teams y acceso remoto controlado.",
+  "subject": "Validación de asignación DHCP para radioenlace",
+  "request_description": "Se reporta que el equipo radioenlace no recibe una dirección IP por DHCP.",
+  "information_gathering": "Se validó la conectividad del segmento, la configuración del puerto y la respuesta DHCP en un entorno controlado.",
+  "possible_causes": [
+    "El equipo puede no contar con la configuración esperada para solicitar DHCP.",
+    "No se dispone de credenciales administrativas del radioenlace para validar la configuración interna."
+  ],
+  "actions_performed": [
+    "Se habilitó un pool DHCP de prueba en la VLAN autorizada.",
+    "Se revisaron las asignaciones con el comando show ip dhcp binding.",
+    "Se validó conectividad ICMP y acceso HTTPS del equipo."
+  ],
+  "commands": [
+    "show ip dhcp binding",
+    "show ip dhcp pool",
+    "ping 10.180.110.50",
+    "show interface vlan 110"
+  ],
+  "results": [
+    "El radioenlace recibió una dirección IP en el segmento de prueba.",
+    "La conectividad de red fue validada durante la sesión."
+  ],
+  "recommendations": [
+    "Documentar la MAC y reservar una dirección DHCP si se requiere una asignación fija.",
+    "Gestionar las credenciales administrativas del radioenlace antes de la puesta en producción."
+  ]
+}
